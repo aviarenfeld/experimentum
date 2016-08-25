@@ -1,0 +1,33 @@
+<!doctype html>
+<!--[if IE 8]>    <html class="no-js ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]> <!--> <html class="no-js">             <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cedar Bark Starter</title>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, fugit.">
+
+    <meta property="og:type"        content="article" />
+    <meta property="og:title"       content="Cedar Bark" />
+    <meta property="og:image"       content="@@{root}images/cedar-leaf.png" />
+    <meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, fugit." />
+
+    <link href="@@{root}styles/main.css" rel="stylesheet" type="text/css" media="all" />
+
+    <script type="text/javascript" src="@@{root}scripts/modernizr.js"></script>
+    <script type="text/javascript" src="@@{root}scripts/jquery.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="/images/favicon.png?v=0">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="@@{pageClass}">

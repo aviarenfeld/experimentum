@@ -1,0 +1,50 @@
+{
+  "symbol-font-16px.sketch" : {
+    "social-media" : {
+      "image-three" : {
+        "image-three.png" : {
+          "format" : "png",
+          "height" : 250,
+          "x" : 1397,
+          "y" : -331,
+          "width" : 250,
+          "name" : "image-three",
+          "scale" : 1
+        }
+      },
+      "image-one" : {
+        "image-one.png" : {
+          "format" : "png",
+          "height" : 250,
+          "x" : -603,
+          "y" : -331,
+          "width" : 250,
+          "name" : "image-one",
+          "scale" : 1
+        }
+      },
+      "image-four" : {
+        "image-four.png" : {
+          "format" : "png",
+          "height" : 500,
+          "x" : 2397,
+          "y" : 669,
+          "width" : 500,
+          "name" : "image-four",
+          "scale" : 1
+        }
+      },
+      "image-two" : {
+        "image-two.png" : {
+          "format" : "png",
+          "height" : 500,
+          "x" : -103,
+          "y" : 169,
+          "width" : 500,
+          "name" : "image-two",
+          "scale" : 1
+        }
+      }
+    }
+  }
+}

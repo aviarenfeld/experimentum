@@ -1,0 +1,160 @@
+/* -----------------------------------------------
+   Typography
+----------------------------------------------- */
+
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-size: 100%;
+  line-height: 1.5;
+  font-weight: 300;
+  color: $base-font-color;
+  font-family: $base-font-family;
+}
+
+a {
+  @include links($base-link);
+}
+
+
+
+h1 {
+  @include type-mega($base-font-color, none);
+}
+
+h2 {
+  @include type-alpha($base-font-color);
+}
+
+h3 {
+  @include type-beta($base-font-color);
+}
+
+h4 {
+  @include type-delta($base-font-color);
+}
+
+h5 {
+  @include type-delta($base-font-color);
+}
+
+h6 {
+  @include type-delta($base-font-color);
+}
+
+p, li, summary {
+  @include type-delta($base-font-color);
+}
+
+p, summary {
+  padding:0 0 15px 0;
+  margin:0;
+}
+
+li {
+  position:relative;
+  list-style: none;
+  padding:0 0 10px 15px;
+  &:last-child {
+    padding-bottom:15px;
+  }
+  li:first-child {
+    margin-top:10px;
+  }
+}
+
+ul {
+  padding:0;
+  margin:0;
+  li:before {
+    content:"";
+    display:inline-block;
+    vertical-align: 1px;
+    width:9px;
+    height:9px;
+    margin:0 10px 0 -20px;
+    border-radius:12px;
+    background:$base-font-color;
+  }
+}
+
+ol {
+  counter-reset: i 0;
+  padding:0;
+  margin:0;
+  li:before {
+    color:$base-font-color;
+    font-weight:500;
+    content: counter(i) ".";
+    counter-increment: i;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+}
+
+blockquote {
+  border-left:5px solid $base-border;
+  margin:20px 0;
+  padding-left: 15px;
+  p {
+    font-size:14px;
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+}
+
+.button {
+  @include btn();
+}
+
+
+// Forms
+label {
+  color:$base-font-color;
+}
+
+#{$all-text-inputs}, select {
+  color:$base-font-color;
+}
+
+#{$all-button-inputs} {
+}
+
+.validation_error {
+  @include font-size(18px);
+}
+.validation_message {
+  @include font-size(14px);
+}
+.alert-warning {
+  @include font-size(18px);
+  padding-bottom: 15px;
+}
+
+// Tables
+table {
+  th {
+    @include font-size(16px);
+    text-align: left;
+  }
+  td {
+    @include font-size(14px);
+  }
+}
+
+// Only display content to screen readers
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

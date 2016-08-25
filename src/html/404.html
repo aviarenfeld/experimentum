@@ -1,0 +1,24 @@
+@@include("./_shell/_head.html.partial", {
+  "{root}": "",
+  "{pageClass}": "not-found"
+})
+
+@@include(handlebars('./_shell/_header.hbs', {
+  "root": "",
+  "page": "not-found"
+}))
+
+<main class="main">
+
+  <h2>The page cannot be found.</h2>
+  <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. <a href="/">Return to the home page.</a></p>
+
+  @@include('./_shell/_footer.html.partial', {
+    "{root}": ""
+  })
+
+</main>
+
+@@include('./_shell/_foot.html.partial', {
+  "{root}": ""
+})

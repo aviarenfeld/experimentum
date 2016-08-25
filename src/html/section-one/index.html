@@ -1,0 +1,35 @@
+@@include("../_shell/_head.html.partial", {
+  "{root}": "../",
+  "{pageClass}": "section-one"
+})
+
+@@include(handlebars('../_shell/_header.hbs', {
+  "root": "../",
+  "page": "section-one"
+}))
+
+<main class="main">
+
+  <h1>Section One</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit atque, tempore modi id officiis, esse, soluta iure cupiditate ullam dolore similique! Nisi accusantium blanditiis incidunt repellat iusto animi architecto similique.</p>
+
+  <h2>Data Driven Content:</h2>
+  <!-- Example using handlebars -->
+  <!-- Note! there are not spaces or line-breaks... -->
+  @@include(handlebars('./_sample-template.hbs', {
+    "root":"./",
+    "foo":"Bar",
+    "data":"sample-collection"
+  }))
+
+  @@include('../_shell/_footer.html.partial', {
+    "{root}": "../"
+  })
+
+</main>
+
+@@include('../_shell/_foot.html.partial', {
+  "{root}": "../"
+})
+
+

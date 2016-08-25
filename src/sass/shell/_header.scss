@@ -1,0 +1,103 @@
+/* -----------------------------------------------
+   Header
+----------------------------------------------- */
+.banner {
+  background:$amanda-black;
+  @include media ($min-sm) {
+    position:fixed;
+    z-index:100;
+    width:100%;
+    height:66px;
+    top:0;
+    left:0;
+    right:0;
+  }
+
+  .container {
+    position:relative;
+    @include media ($min-sm) {
+      @include display(flex);
+      @include justify-content(space-between);
+    }
+  }
+
+  #menu-toggle {
+    position:absolute;
+    top:-3px;
+    right:0;
+  }
+}
+
+.navbar-brand {
+  display:block;
+  padding:15px 0 5px 0;
+  @include media ($min-sm) {
+    width:20%;
+  }
+  img {
+    max-width:20px;
+  }
+}
+
+.menu-nav {
+  display:none;
+  margin:0 -15px;
+  background:$brand-secondary;
+  @include media ($min-sm) {
+    display:block !important;
+    text-align:right;
+    width:80%;
+    padding-top: 8px;
+    margin:0;
+    background:none;
+  }
+
+  ul {
+    padding:15px 0;
+    li {
+      padding:0;
+      @include media ($min-sm) {
+        display:inline-block;
+      }
+
+      &:before {
+        display:none;
+      }
+
+      a {
+        display:block;
+        color:white;
+        font-size:rem(16);
+        text-transform: uppercase;
+        padding:10px 15px;
+        @include media ($min-sm) {
+          padding:0 0 0 20px;
+        }
+
+        &:hover, &:focus, &:active {
+          opacity:.6;
+        }
+      }
+    }
+  }
+}
+
+
+
+// Menu Toggle
+#menu-toggle {
+  color:white;
+  font-size:rem(50);
+  padding:0;
+  margin:0;
+  background:none;
+  border:none;
+  @include media ($min-sm) {
+    display:none;
+  }
+
+  &:hover, &:focus, &:active {
+    background:none;
+    border:none;
+  }
+}

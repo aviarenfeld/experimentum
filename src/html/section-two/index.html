@@ -1,0 +1,26 @@
+@@include("../_shell/_head.html.partial", {
+  "{root}": "../",
+  "{pageClass}": "section-two"
+})
+
+@@include(handlebars('../_shell/_header.hbs', {
+  "root": "../",
+  "page": "section-two"
+}))
+
+<main class="main">
+
+  <h1>Section Two</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit atque, tempore modi id officiis, esse, soluta iure cupiditate ullam dolore similique! Nisi accusantium blanditiis incidunt repellat iusto animi architecto similique.</p>
+
+  @@include('../_shell/_footer.html.partial', {
+    "{root}": "../"
+  })
+
+</main>
+
+@@include('../_shell/_foot.html.partial', {
+  "{root}": "../"
+})
+
+

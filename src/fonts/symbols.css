@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "symbols";
+  src: url('../fonts/symbols.eot');
+  src: url('../fonts/symbols.eot?#iefix') format('eot'),
+    url('../fonts/symbols.woff') format('woff'),
+    url('../fonts/symbols.ttf') format('truetype'),
+    url('../fonts/symbols.svg#symbols') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ico:before {
+  display: inline-block;
+  font-family: "symbols";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.ico-2x { font-size: 2em; }
+.ico-3x { font-size: 3em; }
+.ico-4x { font-size: 4em; }
+.ico-5x { font-size: 5em; }
+.ico-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.ico-cedar-leaf:before { content: "\E001" }
+.ico-chevron-down:before { content: "\E002" }
+.ico-chevron-left:before { content: "\E003" }
+.ico-chevron-right:before { content: "\E004" }
+.ico-chevron-up:before { content: "\E005" }
+.ico-cross:before { content: "\E006" }
+.ico-facebook-circle:before { content: "\E007" }
+.ico-facebook:before { content: "\E008" }
+.ico-flickr-circle:before { content: "\E009" }
+.ico-flickr:before { content: "\E00A" }
+.ico-googleplus-circle:before { content: "\E00B" }
+.ico-googleplus:before { content: "\E00C" }
+.ico-instagram-circle:before { content: "\E00D" }
+.ico-instagram:before { content: "\E00E" }
+.ico-linkedin-circle:before { content: "\E00F" }
+.ico-linkedin:before { content: "\E010" }
+.ico-menu:before { content: "\E011" }
+.ico-pinterest-circle:before { content: "\E012" }
+.ico-pinterest:before { content: "\E013" }
+.ico-rss-circle:before { content: "\E014" }
+.ico-rss:before { content: "\E015" }
+.ico-twitter-circle:before { content: "\E016" }
+.ico-twitter:before { content: "\E017" }
+.ico-vimeo-circle:before { content: "\E018" }
+.ico-vimeo:before { content: "\E019" }
+.ico-youtube-circle:before { content: "\E01A" }
+.ico-youtube:before { content: "\E01B" }

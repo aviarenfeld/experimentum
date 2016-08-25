@@ -1,0 +1,60 @@
+@import "neat-helpers";
+
+// Neat Overrides
+// $column: em(90);
+// $gutter: em(30);
+// $grid-columns: 12;
+$max-width: em(1200);
+
+// Neat Utilities
+// $visual-grid: true; // Un-comment for visual grid.
+$visual-grid-color   : black;
+$visual-grid-opacity : 0.1;
+$visual-grid-index   : front;
+
+// Neat Breakpoints
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1100px;
+$screen-short:730px;
+
+// Media Queries:
+/* ------------------------------------------- */
+/* For min-width queries, above the breakpoint */
+/* ------------------------------------------- */
+$min-xs: new-breakpoint(min-width $screen-xs);
+$min-sm: new-breakpoint(min-width $screen-sm);
+$min-md: new-breakpoint(min-width $screen-md);
+$min-lg: new-breakpoint(min-width $screen-lg);
+$min-short: new-breakpoint(min-height $screen-short);
+
+/* ------------------------------------------- */
+/* For max-width queries, below the breakpoint */
+/* ------------------------------------------- */
+$max-xs: new-breakpoint(max-width $screen-xs - 1);
+$max-sm: new-breakpoint(max-width $screen-sm - 1);
+$max-md: new-breakpoint(max-width $screen-md - 1);
+$max-lg: new-breakpoint(max-width $screen-lg - 1);
+$max-short: new-breakpoint(max-height $screen-short);
+
+// Usage: @include media($min-sm) { ... }
+// @media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* ------------------------------------------- */
+/* Bootstrap-stype variable width ".container" */
+/* ------------------------------------------- */
+@mixin vw-container {
+  padding-left:15px;
+  padding-right:15px;
+  @include outer-container;
+  @include media($min-xs) { max-width: 100%; }
+  @include media($min-sm) { max-width: 100%; }
+  @include media($min-md) { max-width: $screen-md; }
+  @include media($min-lg) { max-width: $screen-lg; }
+}
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

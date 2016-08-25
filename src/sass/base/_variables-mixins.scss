@@ -1,0 +1,157 @@
+/* -----------------------------------------------
+   Variables & Mixins
+----------------------------------------------- */
+$amanda-blue:blue;
+$amanda-red:red;
+$amanda-black:black;
+
+
+// Colors
+$brand-color:$amanda-blue;
+$brand-secondary:$amanda-red;
+$base-border:green;
+$base-font-color:black;
+$base-link:purple;
+$base-link-hover: saturate($base-link, 25%);
+$base-form-highlight:$brand-color;
+$base-form-color:red;
+
+
+/* ------------------------------------------ */
+// Fonts
+$base-font-family: Helvetica, Arial, sans-serif;
+$heading-font-family: Georgia, serif;
+
+// Grid Margin
+$gap:15px;
+
+// Content Section Max-Width
+$content-max-width:50em;
+
+
+/* ------------------------------------------ */
+//Mixins: 
+@mixin centerX() {
+  position: relative;
+  left: 50%;
+  @include transform( translateX(-50%) );
+}
+
+@mixin centerY() {
+  position: relative;
+  top: 50%;
+  @include transform( translateY(-50%) );
+}
+
+@mixin centerXY() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include transform( translate(-50%, -50%) );
+}
+
+// Converting px to rem (IE8 fallback)
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+// Links
+@mixin links($link-color) {
+  color:$link-color;
+  text-decoration: none;
+  @include transition(color 0.3s ease);
+  &:hover, &:focus, &:active {
+    color:lighten($link-color,10%);
+    text-decoration: none;
+  }
+}
+
+@mixin opacity-link($color) {
+  color:$color;
+  @include transition(opacity 0.3s ease);
+  &:hover, &:focus, &:active {
+    opacity:.7;
+  }
+}
+
+// Buttons
+@mixin btn() {
+  @include transition(all 0.3s ease);
+  
+  &:hover, &:focus, &:active {
+  }
+  
+}
+
+// Font Defaults
+@mixin type-mega($color, $text-transform) {
+  color:$color;
+  font-size: rem(26);
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: $text-transform;
+  @include media($min-sm) {
+    font-size: rem(42);
+  }
+}
+
+@mixin type-alpha($color) {
+  color:$color;
+  font-size: rem(22);
+  line-height: 1.4;
+  @include media($min-sm) {
+    font-size: rem(28);
+  }
+}
+
+@mixin type-beta($color) {
+  color:$color;
+  font-size: rem(18);
+  line-height: 1.3;
+  @include media($min-sm) {
+    font-size: rem(24);
+  }
+}
+
+@mixin type-delta($color) {
+  color:$color;
+  font-size: rem(16);
+  font-weight: 300;
+  @include media($min-sm) {
+    font-size: rem(20);
+  }
+}
+
+@mixin type-epsilon($color) {
+  color:$color;
+  font-size:rem(14);
+  @include media($min-sm) {
+    font-size: rem(18);
+  }
+}
+
+@mixin type-zeta($color) {
+  color:$color;
+  font-size: rem(14);
+  line-height:1.2;
+  @include media($min-md) {
+    font-size: rem(16);
+  }
+}
+
+
+
+/* ------------------------------------------ */
+//Placeholders: 
+
+
+// Font Icons
+%font-icons {
+  display: inline-block;
+  font-family: "symbols";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

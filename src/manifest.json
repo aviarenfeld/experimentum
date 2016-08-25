@@ -1,0 +1,49 @@
+{
+  "paths": {
+    "source": "src/",
+    "dist": "dist/"
+  },
+  "dependencies": {
+    "fonts": {
+      "files": ["fonts/*.{eot,svg,ttf,woff}"]
+    },
+    "images": {
+      "files": "images/**/*"
+    },
+    "main.css": {
+      "bower": ["normalize.css"],
+      "files": [
+        "fonts/*.css",
+        "sass/main.scss"
+      ],
+      "main": true
+    },
+    "main.js": {
+      "files": [
+        "scripts/util.js",
+        "scripts/main.js"
+      ],
+      "bower": [
+        "jquery.scrollTo",
+        "jquery.smartresize"
+      ],
+      "main": true
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "modernizr.js": {
+      "bower": ["modernizr"]
+    },
+    "polyfills": {
+      "files": ["bower_components/background-size-polyfill/backgroundsize.min.htc"],
+      "external": true
+    },
+    "html": {
+      "files": [
+        "html/**/*.html",
+        "!html/**/_*.html"
+      ]
+    }
+  }
+}

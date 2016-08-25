@@ -1,0 +1,4 @@
+    @@include('./_analytics.html.partial')
+    <script type="text/javascript" src="@@{root}scripts/main.js"></script>
+  </body>
+</html>
